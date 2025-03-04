@@ -2,28 +2,25 @@ package org.example;
 
 import java.util.Scanner;
 
-public class Main {
+public class ContaTerminal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int numero = 0;
-        String agencia = "";
-        String nomeClinete = "";
-        double saldo = 0.00;
-
         System.out.println("Por favor, digite o número da Conta !");
-        numero = scanner.nextInt();
+        int numero = scanner.nextInt();
 
         System.out.println("Por favor, digite o número da Agência !");
-        agencia = scanner.nextLine();
+        String agencia = scanner.next();
+
+        scanner.nextLine();
 
         System.out.println("Por favor, digite o nome do titular dessa conta! ");
-        nomeClinete = scanner.nextLine();
+        String nomeCliente = scanner.nextLine();
 
         System.out.println("Por favor, digite o seu saldo !");
-        saldo = scanner.nextDouble();
+        double saldo = scanner.nextDouble();
 
-        System.out.println("Olá "+ nomeClinete +
+        System.out.println("Olá "+ nomeCliente +
                 ", obrigado por criar uma conta em nosso banco, sua agência é "+ agencia +
                 ", conta "+ numero +
                 " e seu saldo " + saldo +
